@@ -160,6 +160,68 @@
             #myButtons {
                 row-gap: 1rem !important;
             }
+            #logo {
+                position: absolute;
+                margin-top: 2rem;
+            }
+            #logoWhite {
+                position: relative;
+                left: 29%;
+            }
+        }
+        
+        @media(max-width: 600px) {
+            #logo {
+                position: absolute;
+                margin-top: 2rem;
+            }
+            #logoWhite {
+                position: relative;
+                width: 20rem !important;
+                left: 0;
+            }
+        }
+        
+        @media(max-width: 538px) {
+            #logo {
+                position: absolute;
+                text-align: center;
+                margin-top: 2rem;
+                width: 50% !important;
+            }
+            #logoWhite {
+                position: relative;
+                width: 100% !important;
+                left: 0;
+            }
+        }
+        
+        @media(max-width: 425px) {
+            #logo {
+                position: absolute;
+                text-align: center;
+                margin-top: 3rem;
+                width: 50% !important;
+            }
+            #logoWhite {
+                position: relative;
+                width: 100% !important;
+                left: 0;
+            }
+        }
+        
+        @media(max-width: 321px) {
+            #logo {
+                position: absolute;
+                text-align: center;
+                margin-top: 3rem;
+                width: 50% !important;
+            }
+            #logoWhite {
+                position: relative;
+                width: 100% !important;
+                left: 0;
+            }
         }
         
         #myBtn {
@@ -190,6 +252,16 @@
         h1 {
             font-family: 'Saira Semi Condensed', sans-serif;
         }
+        
+        #logo {
+            width: 20rem;
+            margin-top: 3rem;
+            margin-left: 3rem;
+        }
+        
+        #logoWhite {
+            width: 150% !important;
+        }
     </style>
 
 
@@ -201,7 +273,9 @@
 			<source src="trip.mp4" type="video/mp4">
 			Your browser does not support HTML5 video.
 		</video>
-
+    <div id="logo">
+        <img id="logoWhite" src="logoWhite.png" alt="Company logo">
+    </div>
     <div class="content">
         <div>
             <h1>TRAVEL PLANNER</h1>
