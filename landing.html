@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial;
+            font-size: 1.063rem;
+        }
+        
+        #myVideo {
+            object-fit: cover;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+        }
+        
+        .content {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f1f1f1;
+            height: 100%;
+            width: 15%;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            left: 85%;
+            text-align: center;
+        }
+        
+        @media(min-width: 1201px) {
+            .content {
+                width: 15%;
+                left: 85%;
+            }
+            #myVideo {
+                object-fit: cover;
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: -2;
+            }
+        }
+        
+        @media(max-width: 1200px) {
+            .content {
+                width: 25%;
+                left: 75%;
+            }
+            #myVideo {
+                object-fit: cover;
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: -2;
+            }
+        }
+        
+        @media(max-width: 768px) {
+            .content {
+                width: 100%;
+                height: 43%;
+                left: 0;
+            }
+            #myVideo {
+                object-fit: cover;
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: -2;
+            }
+            #myBtn {
+                width: 8rem;
+                font-size: 1.125rem;
+                padding: 0.625rem;
+                border: 2px solid #fefefe;
+                background-color: unset;
+                color: #fff;
+                cursor: pointer;
+                margin-top: 0 !important;
+            }
+            #myButtons {
+                row-gap: 1rem;
+            }
+        }
+        
+        @media(max-width: 700px) {
+            .content {
+                width: 100%;
+                height: 43%;
+                left: 0;
+            }
+            #myBtn {
+                width: 8rem;
+                font-size: 1.125rem;
+                padding: 0.625rem;
+                border: 2px solid #fefefe;
+                background-color: unset;
+                color: #fff;
+                cursor: pointer;
+                margin-top: 0 !important;
+            }
+            #myButtons {
+                row-gap: 1rem !important;
+            }
+        }
+        
+        #myBtn {
+            width: 8rem;
+            font-size: 1.125rem;
+            padding: 0.625rem;
+            border: 2px solid #fefefe;
+            background-color: unset;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 18.5rem;
+        }
+        
+        #myBtn:hover {
+            background: #ddd;
+            color: black;
+        }
+        
+        .btnHover:hover {
+            background: #ddd !important;
+            color: black !important;
+        }
+        
+        a:hover {
+            color: black !important;
+        }
+        
+        h1 {
+            font-family: 'Saira Semi Condensed', sans-serif;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <video autoplay muted loop id="myVideo">
+			<source src="trip.mp4" type="video/mp4">
+			Your browser does not support HTML5 video.
+		</video>
+
+    <div class="content">
+        <div>
+            <h1>TRAVEL PLANNER</h1>
+
+
+            <div id="myButtons" style=" display: flex; flex-direction: column;row-gap: 1.5rem; align-items:center;">
+                <a href="https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html" class="btnHover" style="width: 8rem;color: #fff;	text-decoration: none;font-size: 1.125rem;padding: 0.625rem; border: 2px solid #fefefe; background-color: unset; cursor: pointer;">Login</a>
+
+                <a href="#" class="btnHover" style="width: 8rem;color: #fff; text-decoration: none;	font-size: 1.125rem;padding: 0.625rem; border: 2px solid #fefefe; background-color: unset; cursor: pointer;">Register</a>
+                <a href="#" class="btnHover" style="width: 8rem;color: #fff;	text-decoration: none;font-size: 1.125rem;padding: 0.625rem; border: 2px solid #fefefe; background-color: unset; cursor: pointer;">About</a>
+                <button id="myBtn" onclick="myFunction()">
+						<i class="fa-solid fa-pause"></i>
+					</button>
+                <p>Created by Dita Mukane 2030</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/25d35d8c20.js" crossorigin="anonymous"></script>
+
+    <script>
+        var video = document.getElementById("myVideo");
+        var btn = document.getElementById("myBtn");
+
+        function myFunction() {
+            if (video.paused) {
+                video.play();
+                btn.innerHTML = "<i class='fa-solid fa-pause'></i>";
+
+            } else {
+                video.pause();
+                btn.innerHTML = "<i class='fa-solid fa-play'></i>";
+
+            }
+        }
+    </script>
+</body>
+
+</html>
